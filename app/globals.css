@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-felt-950: #06150e;
+  --color-felt-900: #0a2218;
+  --color-felt-800: #0f3324;
+  --color-felt-700: #174832;
+  --color-felt-600: #1f6244;
+  --color-gold: #e6c768;
+  --color-win: #4ade80;
+  --color-loss: #f87171;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-felt-950);
+  color: #e8f3ec;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+.card {
+  @apply rounded-xl border border-felt-700 bg-felt-900 p-4;
+}
+
+.btn {
+  @apply inline-flex min-h-11 min-w-11 items-center justify-center gap-1 rounded-lg border border-felt-600 bg-felt-800 px-4 text-sm font-medium text-white transition-colors hover:bg-felt-700 disabled:cursor-not-allowed disabled:opacity-40;
+}
+
+.btn-primary {
+  @apply border-gold bg-gold text-felt-950 hover:bg-yellow-300;
+}
+
+.btn-danger {
+  @apply border-red-500/60 bg-red-950 text-red-200 hover:bg-red-900;
+}
+
+.input {
+  @apply min-h-11 w-full rounded-lg border border-felt-600 bg-felt-950 px-3 text-base text-white placeholder:text-emerald-100/40 focus:border-gold focus:outline-none;
+}
+
+.chip {
+  @apply inline-flex min-h-11 items-center rounded-full border border-felt-600 bg-felt-800 px-4 text-sm font-medium hover:bg-felt-700;
+}
